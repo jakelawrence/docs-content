@@ -189,22 +189,22 @@ void loop() {
 
         // Check to see if the client request was "GET /H" or "GET /L":
         if (currentLine.endsWith("GET /Hr")) {
-          digitalWrite(LEDR, LOW);               // GET /Hr turns the Red LED on
+          digitalWrite(LEDR, HIGH);               // GET /Hr turns the Red LED on
         }
         if (currentLine.endsWith("GET /Lr")) {
-          digitalWrite(LEDR, HIGH);                // GET /Lr turns the Red LED off
+          digitalWrite(LEDR, LOW);                // GET /Lr turns the Red LED off
         }
         if (currentLine.endsWith("GET /Hg")){
-          digitalWrite(LEDG, LOW);                // GET /Hg turns the Green LED on
-        }
-        if (currentLine.endsWith("GET /Lg")){
           digitalWrite(LEDG, HIGH);                // GET /Hg turns the Green LED on
         }
+        if (currentLine.endsWith("GET /Lg")){
+          digitalWrite(LEDG, LOW);                // GET /Hg turns the Green LED on
+        }
         if (currentLine.endsWith("GET /Hb")){
-          digitalWrite(LEDB, LOW);                // GET /Hg turns the Green LED on
+          digitalWrite(LEDB, HIGH);                // GET /Hg turns the Green LED on
         }
         if (currentLine.endsWith("GET /Lb")){
-          digitalWrite(LEDB, HIGH);                // GET /Hg turns the Green LED on
+          digitalWrite(LEDB, LOW);                // GET /Hg turns the Green LED on
         } 
         
       }
